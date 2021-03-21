@@ -41,6 +41,11 @@ const Card = (article) => {
   card.appendChild(headline)
   card.appendChild(author)
 
+  card.addEventListener('click',(event) => {
+    event.stopPropagation()
+    console.log(headline.textContent)
+  })
+
   return card
 }
 
